@@ -1,6 +1,6 @@
 const displayCards = document.getElementById("projects"); // pre-defined target to put finished cards
 
-fetch("../json/projectlist.json") // grab .json file with projects
+fetch("./json/projectlist.json") // grab .json file with projects
 .then(response => response.json()) // parse .json file 
 .then(jsonData => { 
     jsonData.forEach(item => { // loop through each item in projectlist.json

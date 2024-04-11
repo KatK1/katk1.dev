@@ -83,15 +83,14 @@ p {
 .card-img {
     border-radius: 15px;
     padding: calc(2px + 0.4vh);
-    height: 4vw;
-    min-width: 40px;
+    min-width: 150px;
     max-width: 15vw;
 }
 
 .card-title {
     font-family: "Oswald", sans-serif;
     font-size: calc(12px + 1.2vw);
-    margin-top: calc(10px + 2vh);
+    margin-top: calc(2px + 2vh);
     margin-bottom: calc(10px + 1vh);
 }
 

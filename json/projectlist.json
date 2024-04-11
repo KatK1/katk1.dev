@@ -1,6 +1,6 @@
 [
     {
-        "img": "./img/taikopp.png",
+        "img": "https://raw.githubusercontent.com/KatK1/taikopp.com/master/icon/android-chrome-256x256.png",
         "title": "osu!taiko performance point calculator",
         "desc": "This is a simple website used for calculating how much a play would be worth in the popular rhythm game osu! (specifically, in the gamemode osu!taiko) at various points in time",
         "link": "https://www.taikopp.com",

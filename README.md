@@ -1,2 +1,2 @@
 # katk1.dev
- personal website
+ personal website, mostly to show off anything I end up working on when it releases

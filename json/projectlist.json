@@ -1,0 +1,9 @@
+[
+    {
+        "img": "./img/taikopp.png",
+        "title": "osu!taiko performance point calculator",
+        "desc": "This is a simple website used for calculating how much a play would be worth in the popular rhythm game osu! (specifically, in the gamemode osu!taiko) at various points in time",
+        "link": "https://www.taikopp.com",
+        "date": "October, 2022"
+    }
+]

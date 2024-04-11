@@ -8,7 +8,7 @@
 
 html {
     font-family: "inter", sans-serif;
-    background-color: #1a1818;
+    background-color: #080404;
     color: #ffa6a6;
     scroll-behavior: smooth;
     text-align: center;
@@ -16,6 +16,7 @@ html {
 
 body {
     text-align: center;
+    background-color: #1a1818;
 }
 
 header {

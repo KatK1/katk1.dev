@@ -90,7 +90,7 @@ p {
 .card-title {
     font-family: "Oswald", sans-serif;
     font-size: calc(12px + 1.2vw);
-    margin-top: calc(2px + 2vh);
+    margin-top: calc(2px + 1vh);
     margin-bottom: calc(10px + 1vh);
 }
 

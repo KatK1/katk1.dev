@@ -141,7 +141,7 @@ p {
 
 /* animations */
 .move-in-navigation {
-    animation: move-in-navigation .6s cubic-bezier(.6, .6, .3, 1.3)both;
+    animation: move-in-navigation .6s cubic-bezier(.6, .6, 0, 1)both;
     animation-delay: .2s;
 }
 
@@ -164,7 +164,7 @@ p {
 }
 
 .move-in-title {
-    animation: move-in-title .6s cubic-bezier(.6, .6, .3, 1.3)both;
+    animation: move-in-title .6s cubic-bezier(.6, .6, .1, 1.3)both;
     animation-delay: .3s;
 }
 
@@ -187,7 +187,7 @@ p {
 }
 
 .move-in-card {
-    animation: move-in-title .6s cubic-bezier(.6, .6, .3, 1.3)both;
+    animation: move-in-title .6s cubic-bezier(.6, .6, .1, 1.3)both;
     animation-delay: 0.6s;
 }
 
@@ -210,7 +210,7 @@ p {
 }
 
 .move-in-generic {
-    animation: move-in-generic .6s cubic-bezier(.6, .6, .3, 1.3)both;
+    animation: move-in-generic .6s cubic-bezier(.6, .6, .1, 1.3)both;
     animation-delay: .4s;
 }
 

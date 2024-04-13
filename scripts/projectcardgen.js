@@ -1,53 +1,66 @@
-const displayCards = document.getElementById("projects"); // pre-defined target to put finished cards
-
-fetch("./json/projectlist.json") // grab .json file with projects
-.then(response => response.json()) // parse .json file 
-.then(jsonData => { 
-    jsonData.forEach(item => { // loop through each item in projectlist.json
-
-        // create div for the card
-        const card = document.createElement("div");
-        card.classList.add("card");
-        card.classList.add("move-in-card");
-
-        // create img with src as the specified path in the json, can be relative or absolute 
-        const img = document.createElement("img");
-        img.classList.add("card-img");
-        img.src = item.img;
+async function fetchJSON(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error("Network Failure");
+        }
+        return await response.json();
+    } catch (error) {
+        console.error("Error fetching JSON:", error);
+    }
+}
+  
+function createCards(jsonData) {
+    const container = document.getElementById("projects");
+    
+    jsonData.forEach(data => {
+        const colDiv = document.createElement("div");
+        colDiv.classList.add("col");
         
-        // create div for the title element and uses the item's title from json
-        const title = document.createElement("div");
+        const cardDiv = document.createElement("div");
+        cardDiv.classList.add("card", "h-100");
+        
+        const cardBodyDiv = document.createElement("div");
+        cardBodyDiv.classList.add("card-body");
+        
+        const title = document.createElement("h5");
         title.classList.add("card-title");
-        title.textContent = item.title;
-    
-        // same as previous, but for the description using the item's desc
-        const desc = document.createElement("div");
-        desc.classList.add("card-desc");
-        desc.textContent = item.desc;
+        title.textContent = data.title;
 
-        // also same, but setting date using item's date
-        const date = document.createElement("div");
-        date.classList.add("card-date");
-        date.textContent = item.date;
-    
-        // create a link using the item's specified link, opening in a new tab
+        const badge = document.createElement("span");
+        badge.classList.add("badge");
+        if (data.badge == "Current") {
+            badge.classList.add("text-bg-success")
+        } else if (data.badge == "Outdated") {
+            badge.classList.add("text-bg-secondary")
+        }
+        badge.textContent = data.badge;
+        
+        const desc = document.createElement("p");
+        desc.classList.add("card-text");
+        desc.textContent = data.desc;
+        
+        const date = document.createElement("p");
+        date.classList.add("card-text");
+        date.textContent = data.date;
+        
         const link = document.createElement("a");
-        link.href = item.link;
-        link.classList.add("card-link");
-        link.textContent = "More info";
-        link.target = "_blank";
-    
-        // append image, title, description, date, and link elements to this card
-        card.appendChild(img);
-        card.appendChild(title);
-        card.appendChild(desc);
-        card.appendChild(date);
-        card.appendChild(link);
-
-        // append this card and all children to the end of project-cards
-        displayCards.appendChild(card); 
+        link.classList.add("btn");
+        link.setAttribute("href", data.link);
+        link.textContent = "More Info";
+        
+        cardBodyDiv.appendChild(title);
+        cardBodyDiv.appendChild(badge);
+        cardBodyDiv.appendChild(desc);
+        cardBodyDiv.appendChild(date);
+        cardBodyDiv.appendChild(link);
+        
+        cardDiv.appendChild(cardBodyDiv);
+        colDiv.appendChild(cardDiv);
+        container.appendChild(colDiv);
     });
-})
-.catch(error => { // log error if issue with json fetch
-    console.error("Error fetching JSON data:", error);
-})
+}
+
+fetchJSON("../json/projectlist.json")
+    .then(jsonData => createCards(jsonData))
+    .catch(error => console.error("Error fetching JSON:", error));

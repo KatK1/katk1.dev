@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", function () {
+window.onload = function () {
     setActive("acc");
     displayOD();
     calcPP();
@@ -25,7 +25,7 @@ window.addEventListener("DOMContentLoaded", function () {
                 break;
         }
     }
-});
+};
 
 function setActive(name) {
     activeInput = name;

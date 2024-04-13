@@ -46,6 +46,7 @@ function createCards(jsonData) {
         
         const link = document.createElement("a");
         link.classList.add("btn");
+        link.classList.add("btn-primary");
         link.setAttribute("href", data.link);
         link.textContent = "More Info";
         

@@ -3,7 +3,7 @@
         "title": "katk1.dev",
         "badge": "Current",
         "desc": "The Bootstrap rewrite of this site, made only days after publishing the original from-scratch site",
-        "link": "https://katk1.dev",
+        "link": "javascript:void(0)",
         "date": "April, 2024"
     },
     {
@@ -24,7 +24,7 @@
         "title": "taikopp.com v2",
         "badge": "Outdated",
         "desc": "Much the same website it had been, with a facelift",
-        "link": "https://katk1.dev/legacy/taikopp",
+        "link": "https://katk1.dev/legacy",
         "date": "May, 2023"
     },
     {

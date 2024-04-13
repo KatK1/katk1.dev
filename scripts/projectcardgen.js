@@ -43,7 +43,7 @@ function createCards(jsonData) {
         const date = document.createElement("p");
         date.classList.add("card-text");
         date.textContent = data.date;
-        
+
         const link = document.createElement("a");
         link.classList.add("btn");
         link.classList.add("btn-primary");
